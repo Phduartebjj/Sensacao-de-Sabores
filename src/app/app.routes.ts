@@ -3,16 +3,16 @@ import { ProductDetailsComponent } from './features/product-details/product-deta
 import { HomeComponent } from './features/home/home.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        component: HomeComponent,
-    },
-    {
-        path: 'produto/:id',
-        component: ProductDetailsComponent,
-    },
-    {
-        path: '**',
-        redirectTo: '',
-    }
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'produto/:id',
+    component: ProductDetailsComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
