@@ -4,7 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 50%;
-  max-width: 320px;
+  width: 100dvw;
+  min-width: 320px;
+  max-width: 425px;
   position: relative;
 }
 

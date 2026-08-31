@@ -1,0 +1,50 @@
+.benefit-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--surface-peach, #feda90);
+  border-radius: 10px;
+  box-shadow: 0 2px 0 #d8ba7d;
+  padding: 5px 10px 5px 6px;
+  user-select: none;
+  width: 141px;
+  height: 52px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefit-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 #d8ba7d;
+}
+
+.badge-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badge-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+  color: var(--brand-caramel, #9e6031);
+  font-family: var(--font-display, 'Dm Sans', sans-serif);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.badge-title,
+.badge-subtitle {
+  display: block;
+}

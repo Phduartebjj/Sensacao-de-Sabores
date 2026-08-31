@@ -31,20 +31,14 @@
                 "output": "/assets"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
+            "styles": ["src/styles.css"],
             "security": {
               "allowedHosts": []
-            },
-            "ssr": {
-              "entry": "src/server.ts"
             }
           },
           "configurations": {
             "production": {
+              "baseHref": "/Sensacao-de-Sabores/",
               "budgets": [
                 {
                   "type": "initial",
@@ -81,6 +75,13 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/Sensacao-de-Sabores/",
+            "dir": "dist/sensacao-de-sabores/browser"
+          }
         }
       }
     }
