@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  background: #2d1d16;
+  color: #f9d98b;
+  font-family: 'Dm Sans', 'Segoe UI', sans-serif;
+}
+
+.header__menu,
+.header__cart {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__menu img,
+.header__cart img {
+  display: block;
+}
+
+.header__menu img {
+  width: 18px;
+  height: 14px;
+}
+
+.header__cart img {
+  width: 18px;
+  height: 18px;
+}
+
+.header__title {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding: 0 8px;
+}
+
+.header__title span {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  color: #f9d98b;
+}

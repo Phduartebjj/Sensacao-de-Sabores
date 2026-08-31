@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Dm Sans';
+  src: url('assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #f4efe9;
+  font-family: 'Dm Sans', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
