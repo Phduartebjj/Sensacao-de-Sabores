@@ -1,6 +1,6 @@
-import { Product } from './../models/product.model copy';
+import { Product } from '../models/product.model';
 
-export const products: Product[] = [
+export const PRODUCTS: Product[] = [
   {
     id: crypto.randomUUID(),
     name: 'Bolo de Chocolate',
