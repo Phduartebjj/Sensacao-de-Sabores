@@ -4,7 +4,7 @@
   </div>
   <div class="catalog-container">
     @for (product of products(); track product.id) {
-      <app-product-card [product]="product"></app-product-card>
+      <app-product-card [product]="product" (addToCart)="onAddToCart(product)"></app-product-card>
     }
   </div>
 </section>
