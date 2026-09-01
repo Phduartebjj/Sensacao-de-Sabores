@@ -1,7 +1,7 @@
 .product-carousel {
   width: 100%;
-  min-width: 320px;
   max-width: 425px;
+  margin: 0 auto;
   overflow: hidden;
   padding: 0px 22px;
   display: flex;

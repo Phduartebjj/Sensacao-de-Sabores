@@ -8,8 +8,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-width: 320px;
   max-width: 425px;
+  margin: 0 auto;
   height: 52px;
   padding: 0 14px;
   box-sizing: border-box;
