@@ -38,9 +38,9 @@
     <h3 class="product-name">{{ product().name }}</h3>
     <p class="product-flavor">{{ product().flavor }}</p>
     <div class="product-pricing">
-      <span class="current-price">{{ product().price | precoFormatadoPipe}}</span>
+      <span class="current-price">{{ product().price | precoFormatadoPipe }}</span>
       @if (oldPrice()) {
-        <span class="old-price">{{ oldPrice() | precoFormatadoPipe}}</span>
+        <span class="old-price">{{ oldPrice() }}</span>
       }
     </div>
   </div>
