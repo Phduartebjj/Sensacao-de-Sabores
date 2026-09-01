@@ -1,11 +1,11 @@
 .hero {
-  height: 80dvh;
+  width: 100%;
+  max-width: 425px;
+  aspect-ratio: 320 / 498;
   background-image: url('../../../../assets/images/Group\ 76.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 50%;
-  width: 100%;
-  max-width: 425px;
   margin: 0 auto;
   position: relative;
 }
