@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
+  flavor: string;
   image: string[];
   category: ProductCategory;
   badge?: ProductBadge;
@@ -10,6 +11,6 @@ export interface Product {
 
 export type ProductBadge = 'Novo' | 'Destaque';
 
-export type ProductCategory = 'bolos' | 'empadas' | 'doces';
+export type ProductCategory = 'bolos de pote' | 'empadas' | 'doces';
 
 export type SortOptions = 'relevant' | 'price-asc' | 'price-desc';
