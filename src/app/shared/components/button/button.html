@@ -5,6 +5,7 @@
   [class.button--primary]="variant() === 'primary'"
   [class.button--secondary]="variant() === 'secondary'"
   [class.button--outline]="variant() === 'outline'"
+  (click)="clicked.emit($event)"
 >
   <ng-content />
 </button>

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 export type ButtonType = 'primary' | 'secondary' | 'outline';
 
@@ -13,4 +13,6 @@ export class ButtonComponent {
   variant = input<ButtonType>('primary');
   disabled = input<boolean>(false);
   type = input<'button' | 'submit'>('button');
+
+  clicked = output<MouseEvent>();
 }

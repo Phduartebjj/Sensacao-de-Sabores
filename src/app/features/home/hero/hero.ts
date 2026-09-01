@@ -7,4 +7,11 @@ import { ButtonComponent } from '../../../shared/components/button/button';
   styleUrl: './hero.css',
   templateUrl: './hero.html',
 })
-export class HeroComponent {}
+export class HeroComponent {
+  goToCatalog(): void {
+    const catalogSection = document.getElementById('catalog');
+    if (catalogSection) {
+      catalogSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}
