@@ -6,11 +6,12 @@ import { ProductService } from '../../core/services/product/product.service';
 import { CartService } from '../../core/services/cart/cart.service';
 import { Product } from '../../core/models/product.model';
 import { ProductCarousel } from './product-carousel/product-carousel';
+import { CatalogComponent } from './catalog/catalog.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, BenefitsComponent, ProductCarousel],
+  imports: [HeroComponent, BenefitsComponent, ProductCarousel, CatalogComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

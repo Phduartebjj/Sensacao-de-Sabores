@@ -1,0 +1,10 @@
+<section class="catalog__section" id="catalog">
+  <div class="catalog__header">
+    <h2>Conheça <br /><span class="title-emphasis">nossos sabores</span></h2>
+  </div>
+  <div class="catalog-container">
+    @for (product of products(); track product.id) {
+      <app-product-card [product]="product"></app-product-card>
+    }
+  </div>
+</section>
