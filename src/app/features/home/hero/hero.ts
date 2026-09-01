@@ -14,4 +14,11 @@ export class HeroComponent {
       catalogSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  openWhatsApp(): void {
+    const phoneNumber = '5511999999999'; 
+    const message = encodeURIComponent('Olá! Gostaria de fazer um pedido.');
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, '_blank');
+  }
 }
