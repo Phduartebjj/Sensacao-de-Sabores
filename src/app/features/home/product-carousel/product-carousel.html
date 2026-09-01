@@ -1,0 +1,11 @@
+<section class="product-carousel">
+  <div class="product-carousel__header">
+    <h2>Conheça <br><span class="title-emphasis">nossos destaques</span></h2>
+  </div>
+
+  <div class="product-carousel__track">
+    @for (product of products(); track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </div>
+</section>
