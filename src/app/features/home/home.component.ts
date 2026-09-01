@@ -5,11 +5,12 @@ import { ProductCardComponent } from '../../shared/components/product-card.compo
 import { ProductService } from '../../core/services/product/product.service';
 import { CartService } from '../../core/services/cart/cart.service';
 import { Product } from '../../core/models/product.model';
+import { ProductCarousel } from './product-carousel/product-carousel';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, BenefitsComponent, ProductCardComponent],
+  imports: [HeroComponent, BenefitsComponent, ProductCarousel],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

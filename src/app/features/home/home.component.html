@@ -1,19 +1,7 @@
 <main class="home-container">
-  <app-hero></app-hero>
-  <app-benefits></app-benefits>
-
-  <section class="products-section">
-    <div class="section-header">
-      <h2 class="section-title">Nossos Sabores</h2>
-    </div>
-
-    <div class="products-grid">
-      @for (item of products(); track item.id) {
-        <app-product-card
-          [product]="item"
-          (addToCart)="onAddToCart($event)"
-        ></app-product-card>
-      }
-    </div>
+  <section>
+    <app-hero></app-hero>
+    <app-benefits></app-benefits>
   </section>
+  <app-product-carousel></app-product-carousel>
 </main>
