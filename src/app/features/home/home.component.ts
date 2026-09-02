@@ -9,6 +9,7 @@ import { ProductCarousel } from './product-carousel/product-carousel';
 import { CatalogComponent } from './catalog/catalog.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductDetailsSheet } from '../../shared/components/product-details-sheet/product-details-sheet';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ import { ContactComponent } from './contact/contact.component';
     ProductCarousel,
     CatalogComponent,
     AboutUsComponent,
-    ContactComponent,
+    ContactComponent, ProductDetailsSheet
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

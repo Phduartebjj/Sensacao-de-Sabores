@@ -1,0 +1,61 @@
+<div class="bottom-sheet">
+  <div class="sheet-content">
+    <!-- Indicador do drag -->
+    <div class="drag-indicator"></div>
+
+    <!-- Container da imagem -->
+    <div class="image-container">
+      <img [src]="product().image" [alt]="product().name" class="product-image" />
+      <div class="image-indicators">
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+    </div>
+
+    <!-- Informações do produto -->
+    <div class="product-info">
+      <h2 class="product-name">{{ product().name }}</h2>
+
+      <!-- Badges/Tags -->
+      <div class="tags">
+        @if (product().badge) {
+          {{ product().badge }}
+        }
+      </div>
+
+      <!-- Preço -->
+      <div class="price">
+        <span class="price-label">R$</span>
+        <span class="price-value">{{ product().price | number: '1.2-2' }}</span>
+        <span class="price-unit">UN</span>
+      </div>
+
+      <!-- Descrição -->
+      <p class="description">{{ product().description }}</p>
+
+      <!-- Quantidade -->
+      <div class="quantity-section">
+        <span class="quantity-label">Quantidade</span>
+
+        <div class="quantity-control">
+          <button type="button" class="quantity-btn decrease" (click)="decreaseQuantity()">
+            −
+          </button>
+
+          <span>{{ quantity() }}</span>
+
+          <button type="button" class="quantity-btn increment" (click)="increaseQuantity()">
+            +
+          </button>
+        </div>
+      </div>
+
+      <!-- Botões de ação -->
+      <div class="actions">
+        <button class="btn btn-primary">Adicionar no carrinho</button>
+        <button class="btn btn-secondary">Comprar pelo WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
