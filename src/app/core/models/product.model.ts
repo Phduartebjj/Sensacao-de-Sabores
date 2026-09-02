@@ -11,6 +11,6 @@ export interface Product {
 
 export type ProductBadge = 'Novo' | 'Destaque';
 
-export type ProductCategory = 'bolos de pote' | 'empadas' | 'doces';
+export type ProductCategory = 'bolos' | 'empadas' | 'doces';
 
 export type SortOptions = 'relevant' | 'price-asc' | 'price-desc';

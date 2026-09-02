@@ -8,7 +8,7 @@ export const PRODUCTS: Product[] = [
     price: 8.0,
     flavor: 'Paçoca',
     image: ['assets/images/products/Bolo_de_pote_paçoca.jpg'],
-    category: 'bolos de pote',
+    category: 'bolos',
     badge: 'Novo',
   },
   {
@@ -18,7 +18,7 @@ export const PRODUCTS: Product[] = [
     price: 8.0,
     flavor: 'Maracujá',
     image: ['assets/images/products/Bolo_de_pote_maracuja.jpg'],
-    category: 'bolos de pote',
+    category: 'bolos',
     badge: 'Novo',
   },
   {
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
     price: 8.0,
     flavor: 'Limão',
     image: ['assets/images/products/Bolo_de_pote_limao.jpg'],
-    category: 'bolos de pote',
+    category: 'bolos',
     badge: 'Destaque',
   },
   {
