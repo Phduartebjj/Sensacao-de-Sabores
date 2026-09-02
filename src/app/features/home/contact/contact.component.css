@@ -1,0 +1,27 @@
+.contact__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.contact__header {
+  text-align: center;
+}
+
+.title-emphasis {
+  color: var(--content-secondary);
+  font-family: var(--font-display, 'Dm Sans', sans-serif);
+  font-weight: 700;
+  text-shadow: 0 1.5px 0 var(--surface-peach);
+}
+
+.contact__text {
+  width: 280px;
+  font-size: 16px
+}
+
+.contact__badges {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

@@ -8,11 +8,19 @@ import { Product } from '../../core/models/product.model';
 import { ProductCarousel } from './product-carousel/product-carousel';
 import { CatalogComponent } from './catalog/catalog.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, BenefitsComponent, ProductCarousel, CatalogComponent, AboutUsComponent],
+  imports: [
+    HeroComponent,
+    BenefitsComponent,
+    ProductCarousel,
+    CatalogComponent,
+    AboutUsComponent,
+    ContactComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
