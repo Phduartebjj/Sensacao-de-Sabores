@@ -1,4 +1,4 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject, input, output, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { Product } from '../../../core/models/product.model';
 import { CartService } from '../../../core/services/cart/cart.service';
@@ -14,6 +14,7 @@ export class ProductDetailsSheet {
   private readonly cart = inject(CartService);
 
   product = input.required<Product>();
+  closed = output<void>();
   quantity = signal(0);
 
   increaseQuantity(): void {
@@ -26,5 +27,7 @@ export class ProductDetailsSheet {
 
   addProductToCart(): void {
     this.cart.addToCart(this.product(), this.quantity());
+
+    this.closed.emit();
   }
 }

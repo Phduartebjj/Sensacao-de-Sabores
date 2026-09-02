@@ -16,7 +16,18 @@
   </div>
   <div class="catalog-container">
     @for (product of filteredProducts(); track product.id) {
-      <app-product-card [product]="product" (addToCart)="onAddToCart(product)"></app-product-card>
+      <app-product-card
+        [product]="product"
+        (addToCart)="onAddToCart(product)"
+        (cardClick)="openProduct($event)"
+      ></app-product-card>
     }
   </div>
+
+  @if (selectedProduct(); as product) {
+    <app-product-details-sheet
+      [product]="selectedProduct()!"
+      (closed)="closeProduct()"
+    ></app-product-details-sheet>
+  }
 </section>

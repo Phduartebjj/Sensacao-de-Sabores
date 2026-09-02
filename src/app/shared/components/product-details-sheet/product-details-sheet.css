@@ -5,13 +5,16 @@
 .bottom-sheet {
   position: fixed;
   bottom: 0;
-  right: 50;
+  right: 50%;
+  transform: translateX(50%);
   background: white;
   border-radius: 24px 24px 0 0;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
   animation: slideUp 0.3s ease-out;
   z-index: 1000;
+  width: 100%;
   max-width: 425px;
+
   max-height: 70dvh;
   overflow-y: auto;
 }
@@ -26,7 +29,19 @@
   }
 }
 
+.close-button {
+  color: var(--brand-caramel);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: inherit;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .sheet-content {
+  position: relative;
   padding: 16px 20px 24px;
 }
 
@@ -95,25 +110,21 @@
 .product-name {
   font-size: 20px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--brand-brown);
   margin: 0;
 }
 
 /* Tags */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag {
+.badge {
   display: inline-block;
-  background: #8b6f47;
-  color: white;
+  background: var(--brand-caramel);
+  box-shadow: 1px 1px 0px var(--brand-brown);
+  color: var(--surface-cream);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 500;
+  width: fit-content;
 }
 
 /* Price */
@@ -133,7 +144,7 @@
 .price-value {
   font-size: 28px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--brand-brown);
 }
 
 .price-unit {
@@ -146,7 +157,7 @@
 .description {
   font-size: 13px;
   line-height: 1.5;
-  color: #666;
+  color: var(--brand-brown);
   margin: 8px 0;
   max-height: 60px;
   overflow: hidden;
@@ -166,12 +177,27 @@
 
 .quantity-label {
   font-size: 12px;
-  color: #666;
+  color: var(--brand-brown);
   font-weight: 500;
 }
 
+.quantity-control {
+  border: 1px solid var(--brand-brown);
+  width: fit-content;
+  border-radius: 4px;
+}
+
+.quantity-control button {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--brand-brown);
+}
+
+
 .quantity-input {
-  width: 100%;
   padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -179,6 +205,10 @@
   font-family: inherit;
   outline: none;
   transition: border-color 0.2s;
+}
+
+.quantity-number {
+  min-width: 30px;
 }
 
 .quantity-input:focus {
@@ -206,12 +236,14 @@
 }
 
 .btn-primary {
-  background: #8b6f47;
+  background: var(--brand-caramel);
+  box-shadow: 0 4px 0 var(--brand-brown);
+  color: var(--surface-cream);
   color: white;
 }
 
 .btn-primary:hover {
-  background: #7a5e3d;
+  background: var(--brand-brown);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
 }
@@ -221,12 +253,13 @@
 }
 
 .btn-secondary {
-  background: #a67c52;
+  background: var(--brand-caramel);
+  box-shadow: 0 4px 0 var(--brand-brown);
   color: white;
 }
 
 .btn-secondary:hover {
-  background: #956b45;
+  background: var(--brand-brown);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(166, 124, 82, 0.3);
 }
@@ -245,7 +278,7 @@
 }
 
 .bottom-sheet::-webkit-scrollbar-thumb {
-  background: #ddd;
+  background: var(--brand-caramel);
   border-radius: 3px;
 }
 

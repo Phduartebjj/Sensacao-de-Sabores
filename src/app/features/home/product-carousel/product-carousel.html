@@ -5,7 +5,14 @@
 
   <div class="product-carousel__track">
     @for (product of emphasisProducts(); track product.id) {
-      <app-product-card [product]="product" (addToCart)="onAddToCart($event)" />
+      <app-product-card
+        [product]="product"
+        (addToCart)="onAddToCart($event)"
+        (cardClick)="openProduct($event)"
+      />
     }
   </div>
+  @if (selectedProduct()) {
+    <app-product-details-sheet [product]="selectedProduct()!" (closed)="closeProduct()" />
+  }
 </section>

@@ -3,9 +3,10 @@ import { ProductService } from '../../../core/services/product/product.service';
 import { ProductCardComponent } from '../../../shared/components/product-card/product-card.component';
 import { CartService } from '../../../core/services/cart/cart.service';
 import { Product } from '../../../core/models/product.model';
+import { ProductDetailsSheet } from '../../../shared/components/product-details-sheet/product-details-sheet';
 
 @Component({
-  imports: [ProductCardComponent],
+  imports: [ProductCardComponent, ProductDetailsSheet],
   selector: 'app-catalog-component',
   styleUrl: './catalog.component.css',
   templateUrl: './catalog.component.html',
@@ -20,6 +21,16 @@ export class CatalogComponent {
   }
 
   readonly selectedCategory = signal<string | null>(null);
+
+  selectedProduct = signal<Product | null>(null);
+
+  openProduct(product: Product): void {
+    this.selectedProduct.set(product);
+  }
+
+  closeProduct(): void {
+    this.selectedProduct.set(null);
+  }
 
   readonly filteredProducts = computed(() => {
     const category = this.selectedCategory();

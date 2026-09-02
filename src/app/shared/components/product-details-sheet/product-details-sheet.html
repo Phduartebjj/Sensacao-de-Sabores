@@ -1,15 +1,15 @@
 <div class="bottom-sheet">
   <div class="sheet-content">
-    <!-- Indicador do drag -->
-    <div class="drag-indicator"></div>
-
+    <button type="button" class="close-button" (click)="closed.emit()" aria-label="Fechar">
+      x
+    </button>
     <!-- Container da imagem -->
     <div class="image-container">
       <img [src]="product().image" [alt]="product().name" class="product-image" />
       <div class="image-indicators">
-        <span class="indicator"></span>
-        <span class="indicator"></span>
-        <span class="indicator"></span>
+        @for (image of product().image; track image) {
+          <span class="indicator"></span>
+        }
       </div>
     </div>
 
@@ -18,7 +18,7 @@
       <h2 class="product-name">{{ product().name }}</h2>
 
       <!-- Badges/Tags -->
-      <div class="tags">
+      <div class="badge">
         @if (product().badge) {
           {{ product().badge }}
         }
@@ -43,7 +43,7 @@
             −
           </button>
 
-          <span>{{ quantity() }}</span>
+          <span class="quantity-number">{{ quantity() }}</span>
 
           <button type="button" class="quantity-btn increment" (click)="increaseQuantity()">
             +

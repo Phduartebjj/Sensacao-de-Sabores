@@ -20,7 +20,7 @@ import { ProductDetailsSheet } from '../../shared/components/product-details-she
     ProductCarousel,
     CatalogComponent,
     AboutUsComponent,
-    ContactComponent, ProductDetailsSheet
+    ContactComponent, 
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
