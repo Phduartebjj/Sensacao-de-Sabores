@@ -26,5 +26,5 @@
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  width: 60%;
+  width: clamp(300px, 16.3194vw, 600px);
 }

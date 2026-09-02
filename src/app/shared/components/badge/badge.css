@@ -9,8 +9,8 @@
 }
 
 .benefit-badge--wide {
-  min-width: 250px;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .badge-link {
@@ -29,6 +29,17 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+}
+
+.badge-link--wide {
+  gap: 12px;
+  padding: clamp(5px, 0.3472vw, 5px) clamp(10px, 0.8333vw, 12px) clamp(5px, 0.3472vw, 5px)
+    clamp(8px, 0.5556vw, 8px);
+  height: clamp(52px, 15vw, 90px);
+}
+
+.badge-link--wide .badge-text {
+  font-size: 1.05rem;
 }
 
 .badge-link:hover {
@@ -59,7 +70,7 @@
   color: var(--brand-caramel, #9e6031);
   font-family: var(--font-display, 'Dm Sans', sans-serif);
   font-weight: 700;
-  font-size: clamp(0.75rem, 0.8333vw, 0.875rem);
+  font-size: clamp(0.752rem, 0.8333vw, 0.875rem);
   letter-spacing: -0.01em;
   white-space: normal;
   overflow: hidden;
