@@ -12,4 +12,5 @@ export class BadgeComponent {
   title = input<string>('Feito com');
   subtitle = input<string>('Carinho');
   link = input<string>('/');
+  variant = input<'' | 'wide'>('');
 }

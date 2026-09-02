@@ -1,5 +1,5 @@
-<div class="benefit-badge">
-  <a class="badge-link" [href]="link()">
+<div class="benefit-badge" [class.benefit-badge--wide]="variant() === 'wide'">
+  <a class="badge-link" [href]="link()" [class.badge--wide]="variant() === 'wide'">
     <div class="badge-icon-wrapper">
       <img [src]="icon()" [alt]="title() + ' ' + subtitle()" class="badge-icon" />
     </div>

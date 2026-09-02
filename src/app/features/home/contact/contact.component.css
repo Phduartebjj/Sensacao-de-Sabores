@@ -17,11 +17,13 @@
 
 .contact__text {
   width: 280px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .contact__badges {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 15px;
+  width: 60%;
 }
