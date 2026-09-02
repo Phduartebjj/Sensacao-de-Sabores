@@ -44,8 +44,7 @@
     box-shadow: 12px 12px 0px var(--content-secondary);
 }
 
-.about-us__slider-button.previous {
-    transform: rotate(180deg);
+.about-us__slider-button {
     height: 20px;
     border: none;
     width: 11px;
@@ -55,12 +54,16 @@
     background-size: contain;
 }
 
-.about-us__slider-button {
-    height: 20px;
-    border: none;
-    width: 11px;
-    background: url('/assets/icons/arrow.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.about-us__slider-button.previous {
+    transform: rotate(180deg);
+}
+
+
+.about-us__slider-button:active {
+    transform: scale(0.7) translateX(2px);
+
+}
+
+.previous:active {
+    transform: rotate(180deg) scale(0.7) translateX(2px);
 }
