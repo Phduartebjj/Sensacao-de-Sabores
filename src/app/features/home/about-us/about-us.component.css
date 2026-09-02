@@ -13,6 +13,7 @@
   font-family: var(--font-display, 'Dm Sans', sans-serif);
   font-weight: 700;
   text-shadow: 0 1.5px 0 var(--surface-peach);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 .about-us__message {
