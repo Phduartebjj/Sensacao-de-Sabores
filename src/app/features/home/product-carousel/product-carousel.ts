@@ -13,6 +13,8 @@ import { CartService } from '../../../core/services/cart/cart.service';
 export class ProductCarousel {
   private readonly productService = inject(ProductService);
 
+  emphasisProducts = this.productService.searchEmphasis;
+
   readonly products = this.productService.products;
   private readonly cartService = inject(CartService);
   onAddToCart(product: Product): void {

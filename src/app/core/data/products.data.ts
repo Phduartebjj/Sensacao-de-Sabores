@@ -29,6 +29,7 @@ export const PRODUCTS: Product[] = [
     flavor: 'Frango',
     image: ['assets/images/products/Empada_de_frango.jpg'],
     category: 'empadas',
+    badge: 'Destaque',
   },
   {
     id: crypto.randomUUID(),

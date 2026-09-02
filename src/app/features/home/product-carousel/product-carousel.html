@@ -4,8 +4,8 @@
   </div>
 
   <div class="product-carousel__track">
-    @for (product of products(); track product.id) {
-      <app-product-card [product]="product" (addToCart)="onAddToCart(product)" />
+    @for (product of emphasisProducts(); track product.id) {
+      <app-product-card [product]="product" (addToCart)="onAddToCart($event)" />
     }
   </div>
 </section>
