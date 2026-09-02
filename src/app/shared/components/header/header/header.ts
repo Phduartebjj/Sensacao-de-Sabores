@@ -1,9 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CartService } from '../../../../core/services/cart/cart.service';
-import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [RouterLink],
+  imports: [],
   selector: 'app-header',
   styleUrl: './header.css',
   templateUrl: './header.html',
