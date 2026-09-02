@@ -1,9 +1,11 @@
 <div class="benefit-badge">
-  <div class="badge-icon-wrapper">
-    <img [src]="icon()" [alt]="title() + ' ' + subtitle()" class="badge-icon" />
-  </div>
-  <div class="badge-text">
-    <span class="badge-title">{{ title() }}</span>
-    <span class="badge-subtitle">{{ subtitle() }}</span>
-  </div>
+  <a [href]="link()">
+    <div class="badge-icon-wrapper">
+      <img [src]="icon()" [alt]="title() + ' ' + subtitle()" class="badge-icon" />
+    </div>
+    <div class="badge-text">
+      <span class="badge-title">{{ title() }}</span>
+      <span class="badge-subtitle">{{ subtitle() }}</span>
+    </div>
+  </a>
 </div>

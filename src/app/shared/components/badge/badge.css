@@ -7,7 +7,8 @@
   box-shadow: 0 2px 0 #d8ba7d;
   padding: 5px 10px 5px 6px;
   user-select: none;
-  width: 141px;
+  min-width: 141px;
+  max-width: 247px;
   height: 52px;
   box-sizing: border-box;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
