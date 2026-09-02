@@ -1,0 +1,24 @@
+<section class="about-us-section" id="about-us">
+  <div class="about-us__header">
+    <h2 class="title-emphasis">Sobre nós</h2>
+  </div>
+
+  <div class="about-us__slider">
+    <button (click)="previousSlide()" class="about-us__slider-button previous">
+    </button>
+    <img [src]="images[currentSlide()]" alt="Sobre nós" />
+    <button (click)="nextSlide()" class="about-us__slider-button"></button>
+  </div>
+
+  <div class="about-us__message">
+    <img
+      src="assets/icons/heart-plus.svg"
+      alt="Imagem de bolos e empadas"
+      class="about-us__image"
+    />
+    <p>
+      Na Sensação de Sabores, preparamos bolos de pote e empadas artesanais com ingredientes
+      selecionados e aquele sabor caseiro que conquista a cada mordida.
+    </p>
+  </div>
+</section>
