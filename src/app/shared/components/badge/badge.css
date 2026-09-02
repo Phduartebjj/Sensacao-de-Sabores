@@ -8,6 +8,10 @@
   max-width: clamp(141px, 16.3194vw, 235px);
 }
 
+.badge-link--disabled {
+  cursor: default;
+}
+
 .benefit-badge--wide {
   min-width: 300px;
   max-width: 600px;
@@ -21,8 +25,7 @@
   background-color: var(--surface-peach, #feda90);
   border-radius: 10px;
   box-shadow: 0 2px 0 #d8ba7d;
-  padding: clamp(5px, 0.3472vw, 5px) clamp(10px, 0.6944vw, 10px) clamp(5px, 0.3472vw, 5px)
-    clamp(6px, 0.4167vw, 6px);
+  padding: clamp(5px, 0.3472vw, 5px) clamp(10px, 0.6944vw, 10px) clamp(5px, 0.3472vw, 5px) clamp(6px, 0.4167vw, 6px);
   user-select: none;
   height: clamp(52px, 6.25vw, 90px);
   box-sizing: border-box;
@@ -33,8 +36,7 @@
 
 .badge-link--wide {
   gap: 12px;
-  padding: clamp(5px, 0.3472vw, 5px) clamp(10px, 0.8333vw, 12px) clamp(5px, 0.3472vw, 5px)
-    clamp(8px, 0.5556vw, 8px);
+  padding: clamp(5px, 0.3472vw, 5px) clamp(10px, 0.8333vw, 12px) clamp(5px, 0.3472vw, 5px) clamp(8px, 0.5556vw, 8px);
   height: clamp(52px, 15vw, 90px);
 }
 
