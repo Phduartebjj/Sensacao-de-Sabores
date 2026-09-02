@@ -16,7 +16,7 @@
   max-width: 425px;
 
   max-height: 70dvh;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 @keyframes slideUp {
@@ -43,6 +43,9 @@
 .sheet-content {
   position: relative;
   padding: 16px 20px 24px;
+  max-height: 70dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 /* Drag Indicator */
@@ -269,20 +272,20 @@
 }
 
 /* Scrollbar customization */
-.bottom-sheet::-webkit-scrollbar {
+.sheet-content::-webkit-scrollbar {
   width: 6px;
 }
 
-.bottom-sheet::-webkit-scrollbar-track {
+.sheet-content::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.bottom-sheet::-webkit-scrollbar-thumb {
+.sheet-content::-webkit-scrollbar-thumb {
   background: var(--brand-caramel);
   border-radius: 3px;
 }
 
-.bottom-sheet::-webkit-scrollbar-thumb:hover {
+.sheet-content::-webkit-scrollbar-thumb:hover {
   background: #bbb;
 }
 
