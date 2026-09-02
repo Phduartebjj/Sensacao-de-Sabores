@@ -18,15 +18,15 @@ export class CartService {
     this.cartItems().reduce((total, item) => total + item.product.price * item.quantity, 0),
   );
 
-  addToCart(product: Product): void {
+  addToCart(product: Product, quantity: number = 1): void {
     this.cartItems.update((items) => {
       const existingItem = items.find((item) => item.product.id === product.id);
       if (existingItem) {
         return items.map((item) =>
-          item.product.id === product.id ? { ...item, quantity: item.quantity + 1 } : item,
+          item.product.id === product.id ? { ...item, quantity: item.quantity + quantity } : item,
         );
       } else {
-        return [...items, { product, quantity: 1 }];
+        return [...items, { product, quantity }];
       }
     });
   }
