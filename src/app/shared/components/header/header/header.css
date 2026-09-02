@@ -4,6 +4,11 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,6 +33,7 @@
   border: 0;
   background: transparent;
   cursor: pointer;
+  position: relative;
 }
 
 .header__menu img,
@@ -52,6 +58,17 @@
   align-items: center;
   min-width: 0;
   padding: 0 8px;
+}
+
+.header__cart-count {
+  position: absolute;
+  bottom: -8px;
+  padding: 0px 8px;
+  background-color: #f9d98b;
+  box-shadow: 0px 4px 4px #2d1d16;
+  color: #2d1d16;
+  font-size: 10px;
+  border-radius: 6px;
 }
 
 .header__title span {
