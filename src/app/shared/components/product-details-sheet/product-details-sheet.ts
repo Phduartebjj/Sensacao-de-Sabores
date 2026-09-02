@@ -38,7 +38,8 @@ export class ProductDetailsSheet {
 
     const phoneNumber = '5521998501577';
     const message = encodeURIComponent(
-      `Olá! vim pelo site e gostaria de fazer um pedido. Queria comprar ${product.name.split(' ')[0].endsWith('a') ? `essa ${product.name}` : `esse ${product.name}`}, quero ${quantity}.`,
+      `Olá! vim pelo site e gostaria de fazer um pedido.
+       Quero comprar um(a) ${product.name + ` sabor: ${product.flavor}`}, quero ${quantity} por favor.`,
     );
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
