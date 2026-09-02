@@ -1,21 +1,22 @@
-    <section class="catalog__section" id="catalog">
-    <div class="catalog__header">
-        <h2>Conheça <br /><span class="title-emphasis">nossos sabores</span></h2>
-    </div>
+<section class="catalog__section" id="catalog">
+  <div class="catalog__header">
+    <h2>Conheça <br /><span class="title-emphasis">nossos sabores</span></h2>
+  </div>
 
+  <div class="catalog__filters-container">
     <select
-        class="catalog__filters"
-        [value]="selectedCategory() ?? ''"
-        (change)="onCategoryChange($event)"
+      class="catalog__filters"
+      [value]="selectedCategory() ?? ''"
+      (change)="onCategoryChange($event)"
     >
-        <option value="">Todos</option>
-        <option value="bolos">Bolos</option>
-        <option value="empadas">Empadas</option>
+      <option value="">Todos</option>
+      <option value="bolos">Bolos</option>
+      <option value="empadas">Empadas</option>
     </select>
-
-    <div class="catalog-container">
-        @for (product of filteredProducts(); track product.id) {
-        <app-product-card [product]="product" (addToCart)="onAddToCart(product)"></app-product-card>
-        }
-    </div>
-    </section>
+  </div>
+  <div class="catalog-container">
+    @for (product of filteredProducts(); track product.id) {
+      <app-product-card [product]="product" (addToCart)="onAddToCart(product)"></app-product-card>
+    }
+  </div>
+</section>

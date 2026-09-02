@@ -25,3 +25,16 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
+
+.catalog__filters {
+    border-radius: 8px;
+    border: 2px solid var(--content-primary);
+    box-shadow: 0px 1px 0px var(--content-secondary);
+    color: var(--content-primary);
+    font-weight: 500;
+}
+
+.catalog__filters::selection {
+    border: inherit;
+    box-shadow: inherit;
+}
