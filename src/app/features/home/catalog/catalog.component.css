@@ -26,15 +26,23 @@
     gap: 32px;
 }
 
+.catalog__filters-container {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 3px solid var(--content-primary);
+    padding: 3px 5px;
+}
+
 .catalog__filters {
     border-radius: 8px;
     border: 2px solid var(--content-primary);
     box-shadow: 0px 1px 0px var(--content-secondary);
     color: var(--content-primary);
     font-weight: 500;
+    max-width: 130px;
 }
 
-.catalog__filters::selection {
-    border: inherit;
-    box-shadow: inherit;
+.catalog__filters:focus {
+    border-radius: 8px 8px 0px 0px;
+    border: 2px solid var(--content-primary);
 }
