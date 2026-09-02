@@ -5,7 +5,9 @@
   max-width: 140px;
   cursor: pointer;
   user-select: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .product-card:hover {
@@ -54,8 +56,8 @@
   position: absolute;
   top: 6px;
   right: 6px;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background-color: var(--surface-cream, #ffe384);
   border: 1px solid #7e4e33;
@@ -63,7 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 3px 0px 0px 1px;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(126, 78, 51, 0.35);
   transition: all 0.2s ease;
@@ -81,9 +83,14 @@
 }
 
 .cart-icon {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   display: block;
+}
+
+.cart-icon path {
+  width: 100%;
+  height: 100%;
 }
 
 .product-info {
