@@ -1,6 +1,6 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { ProductService } from '../../../core/services/product/product.service';
-import { ProductCardComponent } from '../../../shared/components/product-card.component/product-card.component';
+import { ProductCardComponent } from '../../../shared/components/product-card/product-card.component';
 import { CartService } from '../../../core/services/cart/cart.service';
 import { Product } from '../../../core/models/product.model';
 

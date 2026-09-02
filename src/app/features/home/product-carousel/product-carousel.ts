@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../../../core/services/product/product.service';
-import { ProductCardComponent } from '../../../shared/components/product-card.component/product-card.component';
+import { ProductCardComponent } from '../../../shared/components/product-card/product-card.component';
 import { Product } from '../../../core/models/product.model';
 import { CartService } from '../../../core/services/cart/cart.service';
 

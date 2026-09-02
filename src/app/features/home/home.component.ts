@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HeroComponent } from './hero/hero';
 import { BenefitsComponent } from './benefits/benefits';
-import { ProductCardComponent } from '../../shared/components/product-card.component/product-card.component';
+import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 import { ProductService } from '../../core/services/product/product.service';
 import { CartService } from '../../core/services/cart/cart.service';
 import { Product } from '../../core/models/product.model';
