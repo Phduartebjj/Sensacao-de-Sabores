@@ -10,6 +10,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailsSheet } from '../../shared/components/product-details-sheet/product-details-sheet';
+import { CartDrawer } from '../cart/cart-drawer/cart-drawer';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,7 @@ import { ProductDetailsSheet } from '../../shared/components/product-details-she
     ProductCarousel,
     CatalogComponent,
     AboutUsComponent,
-    ContactComponent, 
+    ContactComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

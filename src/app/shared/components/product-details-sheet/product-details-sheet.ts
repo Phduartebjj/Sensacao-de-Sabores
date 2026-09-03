@@ -26,6 +26,9 @@ export class ProductDetailsSheet {
   }
 
   addProductToCart(): void {
+    if (this.quantity() <= 0) {
+      return;
+    }
     this.cart.addToCart(this.product(), this.quantity());
 
     this.closed.emit();

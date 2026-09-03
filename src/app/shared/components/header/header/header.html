@@ -7,8 +7,12 @@
     <span>Sensação de Sabores</span>
   </div>
 
-  <button class="header__cart" type="button" aria-label="Carrinho">
+  <button (click)="openCart()" class="header__cart" type="button" aria-label="Carrinho">
     <img src="assets/icons/cart-icon.svg" alt="Carrinho" />
     <span class="header__cart-count">{{ cartItemCount() }}</span>
   </button>
+
+  @if (cartOpen()) {
+    <app-cart-drawer (closed)="closeCart()" />
+  }
 </header>

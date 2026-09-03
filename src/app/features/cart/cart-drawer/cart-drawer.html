@@ -1,0 +1,85 @@
+<div class="cart-drawer">
+  <!-- Cabeçalho -->
+  <header class="cart-header">
+    <h2>Seu carrinho</h2>
+
+    <button type="button" class="close-button" aria-label="Fechar carrinho" (click)="closed.emit()">
+      ×
+    </button>
+  </header>
+
+  @if (items().length === 0) {
+    <!-- Carrinho vazio -->
+    <div class="empty-cart">
+      <p>Seu carrinho está vazio.</p>
+      <p>Adicione alguns produtos para continuar.</p>
+    </div>
+  } @else {
+    <!-- Produtos -->
+    <section class="cart-items">
+      @for (item of items(); track item.product.id) {
+        <article class="cart-item">
+          <!-- Imagem -->
+          <div class="cart-item-image">
+            <img [src]="item.product.image[0]" [alt]="item.product.name" />
+          </div>
+
+          <!-- Informações -->
+          <div class="cart-item-info">
+            <h3 class="cart-item-name">
+              {{ item.product.name }}
+            </h3>
+
+            <span class="cart-item-price">
+              R$ {{ item.product.price.toFixed(2).replace('.', ',') }}
+            </span>
+
+            <!-- Quantidade -->
+            <div class="quantity-control">
+              <button
+                type="button"
+                aria-label="Diminuir quantidade"
+                (click)="decreaseQuantity(item.product.id)"
+              >
+                −
+              </button>
+
+              <span class="quantity-number">
+                {{ item.quantity }}
+              </span>
+
+              <button
+                type="button"
+                aria-label="Aumentar quantidade"
+                (click)="increaseQuantity(item.product.id)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <!-- Remover -->
+          <button
+            type="button"
+            class="remove-button"
+            aria-label="Remover produto"
+            (click)="removeItem(item.product.id)"
+          >
+            ×
+          </button>
+        </article>
+      }
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+
+        <strong> R$ {{ totalPrice().toFixed(2).replace('.', ',') }} </strong>
+      </div>
+
+      <button type="button" class="checkout-button">Finalizar pedido</button>
+    </footer>
+  }
+</div>
