@@ -14,7 +14,11 @@
   </div>
   @if (selectedProduct()) {
     <div class="product-details-sheet-overlay" (click)="closeProduct()">
-      <app-product-details-sheet [product]="selectedProduct()!" (closed)="closeProduct()" />
+      <app-product-details-sheet
+        [product]="selectedProduct()!"
+        (closed)="closeProduct()"
+        (click)="$event.stopPropagation()"
+      />
     </div>
   }
 </section>

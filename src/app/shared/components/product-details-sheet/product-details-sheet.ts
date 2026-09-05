@@ -2,6 +2,7 @@ import { Component, inject, input, output, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { Product } from '../../../core/models/product.model';
 import { CartService } from '../../../core/services/cart/cart.service';
+import { NotificationService } from '../../../core/services/notification/notification.service';
 
 @Component({
   imports: [DecimalPipe],
@@ -12,7 +13,7 @@ import { CartService } from '../../../core/services/cart/cart.service';
 })
 export class ProductDetailsSheet {
   private readonly cart = inject(CartService);
-
+  private readonly notification = inject(NotificationService);
   product = input.required<Product>();
   closed = output<void>();
   quantity = signal(0);
@@ -27,10 +28,12 @@ export class ProductDetailsSheet {
 
   addProductToCart(): void {
     if (this.quantity() <= 0) {
+      this.notification.show('Selecione uma quantidade.', 'warning');
       return;
     }
     this.cart.addToCart(this.product(), this.quantity());
 
+    this.notification.show('Produto adicionado ao carrinho!', 'success');
     this.closed.emit();
   }
 

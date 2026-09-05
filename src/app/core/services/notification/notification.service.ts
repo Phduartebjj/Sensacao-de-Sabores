@@ -17,6 +17,10 @@ export class NotificationService {
     this.message.set(message);
     this.type.set(type);
     this.visible.set(true);
+
+    setTimeout(() => {
+      this.hide();
+    }, 3000);
   }
 
   hide(): void {

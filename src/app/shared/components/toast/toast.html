@@ -1,1 +1,6 @@
-<p>toast works!</p>
+@if (visible()) {
+  <div class="toast" [class]="'toast--' + type()">
+    {{ message() }}
+    <span class="toast__progress" [class]="'toast--' + type()"></span>
+  </div>
+}
