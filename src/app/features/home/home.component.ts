@@ -33,28 +33,32 @@ export class HomeComponent {
   private readonly cartService = inject(CartService);
 
   readonly products = this.productService.products;
+  isClosing = signal(false);
 
+closeProduct(): void {
+  if (this.isClosing()) return;
+
+  this.isClosing.set(true);
+
+  setTimeout(() => {
+    this.selectedProduct.set(null);
+    this.isClosing.set(false);
+    this.router.navigate(['/']);
+  }, 300);
+}
   onAddToCart(product: Product): void {
     this.cartService.addToCart(product);
   }
 
-  closeProduct(): void {
-    this.selectedProduct.set(null);
-    this.router.navigate(['/']);
-  }
   constructor() {
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
-
-      console.log('ID DA URL:', id);
 
       if (!id) {
         return;
       }
 
       const product = this.productService.getProductById(id);
-
-      console.log('PRODUTO ENCONTRADO:', product);
 
       if (product) {
         this.selectedProduct.set(product);

@@ -40,6 +40,16 @@
 
   max-height: 70dvh;
   overflow: hidden;
+
+  animation: slideUp 0.3s ease-out;
+}
+
+:host {
+  display: block;
+}
+
+:host(.closing) .bottom-sheet {
+  animation: slideDown 0.3s ease-in forwards;
 }
 
 @keyframes slideUp {
@@ -49,6 +59,17 @@
 
   to {
     transform: translateY(0) translateX(50%);
+  }
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0) translateX(50%);
+  }
+
+  to {
+    transform: translateY(100%) translateX(50%);
   }
 }
 

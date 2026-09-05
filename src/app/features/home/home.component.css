@@ -15,7 +15,14 @@
   z-index: 1000;
   width: 100dvw;
   height: 100dvh;
+
+  animation: overlay-in 300ms ease forwards;
 }
+
+.product-details-sheet-overlay.closing {
+  animation: overlay-out 300ms ease forwards;
+}
+
 
 .products-section {
   width: 100%;
@@ -47,4 +54,24 @@
   gap: 24px 16px;
   justify-items: center;
   width: 100%;
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }

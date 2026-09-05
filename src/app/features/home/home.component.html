@@ -13,11 +13,12 @@
   </div>
 </main>
 @if (selectedProduct(); as product) {
-  <div class="product-details-sheet-overlay" (click)="closeProduct()">
+  <div class="product-details-sheet-overlay" [class.closing]="isClosing()" (click)="closeProduct()">
     <app-product-details-sheet
       [product]="product"
       (closed)="closeProduct()"
       (click)="$event.stopPropagation()"
+      [class.closing]="isClosing()"
     />
   </div>
 }
