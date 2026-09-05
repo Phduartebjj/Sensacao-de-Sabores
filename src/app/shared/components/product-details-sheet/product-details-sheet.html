@@ -1,8 +1,13 @@
 <div class="bottom-sheet">
   <div class="sheet-content">
-    <button type="button" class="close-button" (click)="closed.emit()" aria-label="Fechar">
-      ✖
-    </button>
+    <section class="sheet-header">
+      <button type="button" class="share-button" aria-label="Fechar">
+        <img src="sensacao-de-sabores/src/assets/icons/share.svg" alt="" />
+      </button>
+      <button type="button" class="close-button" (click)="closed.emit()" aria-label="Fechar">
+        ✖
+      </button>
+    </section>
     <!-- Container da imagem -->
     <div class="image-container">
       <img [src]="product().image" [alt]="product().name" class="product-image" />

@@ -2,6 +2,27 @@
   display: block;
 }
 
+.sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 12px;
+}
+
+.share-button {
+  border: none;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background-image: url('/assets/icons/share.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+  background-color: transparent;
+}
+
 .bottom-sheet {
   position: fixed;
   bottom: 0;
