@@ -1,7 +1,7 @@
 <div class="bottom-sheet">
   <div class="sheet-content">
     <section class="sheet-header">
-      <button type="button" class="share-button" aria-label="Fechar">
+      <button type="button" class="share-button" (click)="shareProduct()" aria-label="Compartilhar">
         <img src="sensacao-de-sabores/src/assets/icons/share.svg" alt="" />
       </button>
       <button type="button" class="close-button" (click)="closed.emit()" aria-label="Fechar">

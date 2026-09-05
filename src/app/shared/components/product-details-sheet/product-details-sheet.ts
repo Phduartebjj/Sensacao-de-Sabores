@@ -50,4 +50,14 @@ export class ProductDetailsSheet {
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
   }
+
+  async shareProduct(): Promise<void> {
+    if (navigator.share) {
+      await navigator.share({
+        title: `${this.product().name} - ${this.product().flavor}`,
+        text: `Confira este produto: ${this.product().name} - ${this.product().flavor}`,
+        url: window.location.href,
+      });
+    }
+  }
 }
