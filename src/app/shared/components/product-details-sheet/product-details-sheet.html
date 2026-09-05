@@ -39,14 +39,43 @@
         ✖
       </button>
     </section>
-    <!-- Container da imagem -->
-    <div class="image-container">
-      <img [src]="product().image" [alt]="product().name" class="product-image" loading="lazy" />
-      <div class="image-indicators">
+    <!-- Carrossel de imagens -->
+    <div
+      class="image-container"
+      (pointerdown)="onPointerDown($event)"
+      (pointerup)="onPointerUp($event)"
+      (pointercancel)="onPointerCancel()"
+    >
+      <div
+        class="image-track"
+        [style.transform]="'translateX(-' + currentImageIndex() * 100 + '%)'"
+      >
         @for (image of product().image; track image) {
-          <span class="indicator"></span>
+          <div class="image-slide">
+            <img
+              [src]="image"
+              [alt]="product().name"
+              class="product-image"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
         }
       </div>
+
+      @if (product().image.length > 1) {
+        <div class="image-indicators">
+          @for (image of product().image; track image; let i = $index) {
+            <button
+              type="button"
+              class="indicator"
+              [class.active]="currentImageIndex() === i"
+              [attr.aria-label]="'Ver imagem ' + (i + 1)"
+              (click)="goToImage(i)"
+            ></button>
+          }
+        </div>
+      }
     </div>
 
     <!-- Informações do produto -->

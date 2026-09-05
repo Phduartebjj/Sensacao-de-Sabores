@@ -17,6 +17,47 @@ export class ProductDetailsSheet {
   product = input.required<Product>();
   closed = output<void>();
   quantity = signal(0);
+  currentImageIndex = signal(0);
+
+  private pointerStartX = 0;
+
+  onPointerDown(event: PointerEvent): void {
+    this.pointerStartX = event.clientX;
+  }
+
+  onPointerUp(event: PointerEvent): void {
+    const difference = event.clientX - this.pointerStartX;
+    if (Math.abs(difference) < 50) {
+      return;
+    }
+    if (difference < 0) {
+      this.nextImage();
+    } else {
+      this.previousImage();
+    }
+  }
+
+  onPointerCancel(): void {
+    this.pointerStartX = 0;
+  }
+
+  nextImage(): void {
+    const totalImages = this.product().image.length;
+
+    if (totalImages <= 1) {
+      return;
+    }
+
+    this.currentImageIndex.update((index) => Math.min(index + 1, totalImages - 1));
+  }
+
+  previousImage(): void {
+    this.currentImageIndex.update((index) => Math.max(index - 1, 0));
+  }
+
+  goToImage(index: number): void {
+    this.currentImageIndex.set(index);
+  }
 
   increaseQuantity(): void {
     this.quantity.update((value) => value + 1);

@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
     description: 'Empada de frango com massa crocante e recheio suculento.',
     price: 10.0,
     flavor: 'Frango',
-    image: ['assets/images/products/400x400/Empada_de_frango-400.webp'],
+    image: ['assets/images/products/400x400/Empada_de_frango-400.webp', 'assets/images/products/400x400/Empada_de_frango_garfo-400.webp'],
     category: 'empadas',
     badge: 'Destaque',
   },
