@@ -79,7 +79,9 @@
         <strong> R$ {{ totalPrice().toFixed(2).replace('.', ',') }} </strong>
       </div>
 
-      <button type="button" class="checkout-button">Finalizar pedido</button>
+      <button type="button" class="checkout-button" (click)="finishOrder()">
+        Finalizar pedido
+      </button>
     </footer>
   }
 </div>
