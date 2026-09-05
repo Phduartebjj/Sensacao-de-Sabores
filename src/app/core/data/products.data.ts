@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     id: 'bolo-coco',
     name: 'Bolo de pote',
     description: 'Delicioso bolo de coco com cobertura cremosa.',
-    price: 8.0,
+    price: 10.0,
     flavor: 'Coco',
     image: ['assets/images/products/800x800/Bolo_de_coco-800.webp'],
     category: 'bolos',

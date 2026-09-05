@@ -27,11 +27,6 @@
   box-shadow: 4px 4px 0px var(--content-secondary);
 }
 
-.about-us__image {
-  position: absolute;
-  right: 20px;
-}
-
 .about-us__slider {
   display: flex;
   justify-content: center;
