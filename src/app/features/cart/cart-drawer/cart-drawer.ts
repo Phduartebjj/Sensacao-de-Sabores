@@ -52,7 +52,7 @@ Gostaria de confirmar a disponibilidade dos produtos.`;
 
   finishOrder(): void {
     const message = this.createWhatsAppMessage();
-    const phone = '5521965494017';
+    const phone = '5521998501577';
 
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
