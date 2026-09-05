@@ -2,7 +2,7 @@ import { Product } from '../models/product.model';
 
 export const PRODUCTS: Product[] = [
   {
-    id: crypto.randomUUID(),
+    id: 'bolo-pacoca',
     name: 'Bolo de pote',
     description: 'Delicioso bolo de paçoca com cobertura cremosa.',
     price: 8.0,
@@ -12,7 +12,7 @@ export const PRODUCTS: Product[] = [
     badge: 'Novo',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'bolo-maracuja',
     name: 'Bolo de pote',
     description: 'Delicioso bolo de maracujá com cobertura cremosa.',
     price: 8.0,
@@ -22,8 +22,8 @@ export const PRODUCTS: Product[] = [
     badge: 'Novo',
   },
   {
-    id: crypto.randomUUID(),
-    name: 'Empadao',
+    id: 'empadao-frango',
+    name: 'Empadão',
     description: 'Empada de frango com massa crocante e recheio suculento.',
     price: 10.0,
     flavor: 'Frango',
@@ -32,7 +32,7 @@ export const PRODUCTS: Product[] = [
     badge: 'Destaque',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'bolo-limao',
     name: 'Bolo de pote',
     description: 'Delicioso bolo de limão com cobertura cremosa.',
     price: 8.0,
@@ -42,8 +42,8 @@ export const PRODUCTS: Product[] = [
     badge: 'Destaque',
   },
   {
-    id: crypto.randomUUID(),
-    name: 'Empadao',
+    id: 'empadao-camarao',
+    name: 'Empadão',
     description: 'Empada de camarão com massa crocante e recheio suculento.',
     price: 13.0,
     flavor: 'Camarão',
