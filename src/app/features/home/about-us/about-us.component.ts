@@ -10,9 +10,9 @@ export class AboutUsComponent {
   currentSlide = signal(0);
 
   images = [
-    'assets/images/products/Empada_de_frango_garfo.jpg',
-    'assets/images/products/Bolo_de_ninho.jpg',
-    'assets/images/products/Empada_de_frango.jpg',
+    'assets/images/products/400x400/Empada_de_frango-400.webp',
+    'assets/images/products/400x400/Bolo_de_ninho-400.webp',
+    'assets/images/products/400x400/Empada_de_frango-400.webp',
   ];
 
   nextSlide(): void {
