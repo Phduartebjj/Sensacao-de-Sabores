@@ -26,10 +26,10 @@
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px 8px;
+  gap: 22px clamp(8px, 2.5vw, 16px);
   justify-content: center;
   width: 100%;
-  max-width: 320px;
+  max-width: clamp(320px, 90vw, 360px);
   margin: 0 auto;
 }
 

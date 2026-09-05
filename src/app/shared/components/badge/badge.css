@@ -5,7 +5,7 @@
 
 .benefit-badge {
   width: 100%;
-  max-width: clamp(141px, 16.3194vw, 235px);
+  max-width: clamp(141px, 45vw, 235px);
 }
 
 .badge-link--disabled {
@@ -27,7 +27,7 @@
   box-shadow: 0 2px 0 #d8ba7d;
   padding: clamp(5px, 0.3472vw, 5px) clamp(10px, 0.6944vw, 10px) clamp(5px, 0.3472vw, 5px) clamp(6px, 0.4167vw, 6px);
   user-select: none;
-  height: clamp(52px, 6.25vw, 90px);
+  height: clamp(52px, 15.5vw, 90px);
   box-sizing: border-box;
   transition:
     transform 0.2s ease,
@@ -57,8 +57,8 @@
 }
 
 .badge-icon {
-  width: clamp(40px, 4.9306vw, 71px);
-  height: clamp(40px, 4.9306vw, 71px);
+  width: clamp(40px, 12vw, 71px);
+  height: clamp(40px, 12vw, 71px);
   display: block;
 }
 
@@ -71,8 +71,8 @@
   line-height: 1.15;
   color: var(--brand-caramel, #9e6031);
   font-family: var(--font-display, 'Dm Sans', sans-serif);
-  font-weight: 700;
-  font-size: clamp(0.752rem, 0.8333vw, 0.875rem);
+  font-weight: 900;
+  font-size: clamp(0.77rem, 3.5vw, 0.95rem);
   letter-spacing: -0.01em;
   white-space: normal;
   overflow: hidden;
