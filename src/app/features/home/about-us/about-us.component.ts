@@ -12,7 +12,7 @@ export class AboutUsComponent {
   images = [
     'assets/images/products/400x400/Empada_de_frango-400.webp',
     'assets/images/products/400x400/Bolo_de_ninho-400.webp',
-    'assets/images/products/400x400/Empada_de_frango-400.webp',
+    'assets/images/products/400x400/Empada_de_frango_garfo-400.webp',
   ];
 
   nextSlide(): void {

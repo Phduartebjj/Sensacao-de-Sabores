@@ -9,7 +9,7 @@ export const PRODUCTS: Product[] = [
     flavor: 'Paçoca',
     image: ['assets/images/products/800x800/Bolo_de_pote_paçoca-800.webp'],
     category: 'bolos',
-    badge: 'Novo',
+    badge: 'Novo', 
   },
   {
     id: 'bolo-maracuja',

@@ -4,9 +4,41 @@
   </div>
 
   <div class="about-us__slider">
-    <button (click)="previousSlide()" class="about-us__slider-button previous"></button>
+    <button
+      type="button"
+      (click)="previousSlide()"
+      class="about-us__slider-button previous"
+      aria-label="Imagem anterior"
+    >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M14.29 5.71L9.4 10.6C8.62 11.38 8.62 12.65 9.4 13.43L14.29 18.32"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
     <img [src]="images[currentSlide()]" alt="Sobre nós" />
-    <button (click)="nextSlide()" class="about-us__slider-button"></button>
+
+    <button
+      type="button"
+      (click)="nextSlide()"
+      class="about-us__slider-button"
+      aria-label="Próxima imagem"
+    >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M9.71 18.29L14.6 13.4C15.38 12.62 15.38 11.35 14.6 10.57L9.71 5.68"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
   </div>
 
   <div class="about-us__message">
@@ -15,6 +47,7 @@
       alt="Imagem de bolos e empadas"
       class="about-us__image"
     />
+
     <p>
       Na Sensação de Sabores, preparamos bolos de pote e empadas artesanais com ingredientes
       selecionados e aquele sabor caseiro que conquista a cada mordida.

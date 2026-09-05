@@ -46,23 +46,28 @@
 }
 
 .about-us__slider-button {
-  height: 20px;
+  height: 40px;
   border: none;
-  width: 11px;
-  background: url('/assets/icons/arrow.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  width: 40px;
+  background: inherit;
+  cursor: pointer;
+  color: var(--brand-brown);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: visible;
 }
 
-.about-us__slider-button.previous {
-  transform: rotate(180deg);
+.about-us__slider-button svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  flex-shrink: 0;
+  overflow: visible;
 }
 
 .about-us__slider-button:active {
   transform: scale(0.7) translateX(2px);
-}
-
-.previous:active {
-  transform: rotate(180deg) scale(0.7) translateX(2px);
 }
