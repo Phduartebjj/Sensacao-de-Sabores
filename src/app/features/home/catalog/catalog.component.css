@@ -48,3 +48,11 @@
     border-radius: 8px 8px 0px 0px;
     border: 2px solid var(--content-primary);
 }
+
+.product-details-sheet-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    width: 100dvw;
+    height: 100dvh;
+}

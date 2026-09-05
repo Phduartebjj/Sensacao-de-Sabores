@@ -13,6 +13,8 @@
   </button>
 
   @if (cartOpen()) {
-    <app-cart-drawer (closed)="closeCart()" />
+    <div class="cart-overlay" (click)="closeCart()">
+      <app-cart-drawer (click)="$event.stopPropagation()" (closed)="closeCart()" />
+    </div>
   }
 </header>

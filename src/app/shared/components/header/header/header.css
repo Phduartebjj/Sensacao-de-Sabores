@@ -3,6 +3,14 @@
   width: 100%;
 }
 
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100dvw;
+  height: 100dvh;
+}
+
 .header {
   position: fixed;
   top: 0;
