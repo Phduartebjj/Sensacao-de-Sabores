@@ -1,4 +1,5 @@
-import { Injectable, signal, computed } from '@angular/core';
+import { Injectable, signal, computed, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CartItem } from '../../models/cart-item.model';
 import { Product } from '../../models/product.model';
 
@@ -6,13 +7,29 @@ import { Product } from '../../models/product.model';
   providedIn: 'root',
 })
 export class CartService {
-  private readonly cartItems = signal<CartItem[]>([]);
-
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly cartItems = signal<CartItem[]>(this.getStorageCart());
   readonly items = this.cartItems.asReadonly();
 
   readonly totalItems = computed(() =>
     this.cartItems().reduce((total, item) => total + item.quantity, 0),
   );
+
+  private getStorageCart(): CartItem[] {
+    if (!isPlatformBrowser(this.platformId)) {
+      return [];
+    }
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+  }
+
+  private updateStorageCart(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    localStorage.setItem('cart', JSON.stringify(this.cartItems()));
+  }
 
   readonly totalPrice = computed(() =>
     this.cartItems().reduce((total, item) => total + item.product.price * item.quantity, 0),
@@ -29,14 +46,19 @@ export class CartService {
         return [...items, { product, quantity }];
       }
     });
+
+    this.updateStorageCart();
   }
 
   removeFromCart(productId: string): void {
     this.cartItems.update((items) => items.filter((item) => item.product.id !== productId));
+
+    this.updateStorageCart();
   }
 
   clearCart(): void {
     this.cartItems.set([]);
+    this.updateStorageCart();
   }
 
   increaseQuantity(productId: string): void {
@@ -45,6 +67,7 @@ export class CartService {
         item.product.id === productId ? { ...item, quantity: item.quantity + 1 } : item,
       ),
     );
+    this.updateStorageCart();
   }
 
   decreaseQuantity(productId: string): void {
@@ -55,5 +78,6 @@ export class CartService {
         )
         .filter((item) => item.quantity > 0),
     );
+    this.updateStorageCart();
   }
 }
