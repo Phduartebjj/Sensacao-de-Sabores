@@ -1,6 +1,8 @@
 @if (visible()) {
-  <div class="toast" [class]="'toast--' + type()">
-    {{ message() }}
-    <span class="toast__progress" [class]="'toast--' + type()"></span>
-  </div>
+  @for (id of [toastId()]; track id) {
+    <div class="toast" [class]="'toast--' + type()">
+      {{ message() }}
+      <span class="toast__progress" [class]="'toast--' + type()"></span>
+    </div>
+  }
 }

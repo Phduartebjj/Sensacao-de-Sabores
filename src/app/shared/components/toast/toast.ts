@@ -9,10 +9,8 @@ import { NotificationService } from '../../../core/services/notification/notific
 })
 export class ToastComponent {
   private readonly notificationService = inject(NotificationService);
-
+  readonly toastId = this.notificationService.toastId;
   readonly message = this.notificationService.toastMessage;
   readonly visible = this.notificationService.toastVisible;
   readonly type = this.notificationService.toastType;
-
-
 }
