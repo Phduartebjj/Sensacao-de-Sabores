@@ -28,12 +28,12 @@ export class ProductDetailsSheet {
 
   addProductToCart(): void {
     if (this.quantity() <= 0) {
-      this.notification.show('Selecione uma quantidade.', 'warning');
+      this.notification.show('✖ Selecione uma quantidade.', 'warning');
       return;
     }
     this.cart.addToCart(this.product(), this.quantity());
 
-    this.notification.show('Produto adicionado ao carrinho!', 'success');
+    this.notification.show('🛒 Produto adicionado ao carrinho!', 'success');
     this.closed.emit();
   }
 
