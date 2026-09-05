@@ -11,14 +11,22 @@ import { CartDrawer } from '../../../../features/cart/cart-drawer/cart-drawer';
 export class HeaderComponent {
   private readonly cartService = inject(CartService);
   cartOpen = signal(false);
-
   openCart(): void {
+    this.isClosing.set(false);
     this.cartOpen.set(true);
   }
 
-  closeCart(): void {
-    this.cartOpen.set(false);
-  }
+  isClosing = signal(false);
 
+  closeCart(): void {
+    if (this.isClosing()) return;
+
+    this.isClosing.set(true);
+
+    setTimeout(() => {
+      this.cartOpen.set(false);
+      this.isClosing.set(false);
+    }, 300);
+  }
   cartItemCount = this.cartService.totalItems;
 }
