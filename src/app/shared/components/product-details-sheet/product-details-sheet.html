@@ -3,13 +3,34 @@
     <section class="sheet-header">
       <button type="button" class="share-button" (click)="shareProduct()" aria-label="Compartilhar">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+          <circle
+            cx="7"
+            cy="12"
+            r="2"
+            stroke="currentColor"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
 
-          <circle cx="17" cy="6" r="2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+          <circle
+            cx="17"
+            cy="6"
+            r="2"
+            stroke="currentColor"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
 
           <path d="M15 7L8.5 11" stroke="currentColor" stroke-width="1.5" />
 
-          <circle cx="17" cy="18" r="2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+          <circle
+            cx="17"
+            cy="18"
+            r="2"
+            stroke="currentColor"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
 
           <path d="M8.5 13.5L15 17" stroke="currentColor" stroke-width="1.5" />
         </svg>
@@ -20,7 +41,7 @@
     </section>
     <!-- Container da imagem -->
     <div class="image-container">
-      <img [src]="product().image" [alt]="product().name" class="product-image" />
+      <img [src]="product().image" [alt]="product().name" class="product-image" loading="lazy" />
       <div class="image-indicators">
         @for (image of product().image; track image) {
           <span class="indicator"></span>
