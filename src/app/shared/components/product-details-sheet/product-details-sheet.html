@@ -2,7 +2,17 @@
   <div class="sheet-content">
     <section class="sheet-header">
       <button type="button" class="share-button" (click)="shareProduct()" aria-label="Compartilhar">
-        <img src="/assets/icons/share-icon.svg" alt="" />
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+
+          <circle cx="17" cy="6" r="2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+
+          <path d="M15 7L8.5 11" stroke="currentColor" stroke-width="1.5" />
+
+          <circle cx="17" cy="18" r="2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+
+          <path d="M8.5 13.5L15 17" stroke="currentColor" stroke-width="1.5" />
+        </svg>
       </button>
       <button type="button" class="close-button" (click)="closed.emit()" aria-label="Fechar">
         ✖

@@ -17,12 +17,12 @@
   height: 45px;
   cursor: pointer;
   background-color: transparent;
+  color: var(--brand-caramel);
 }
 
-.share-button img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.share-button svg {
+  width: 36px;
+  height: 36px;
 }
 
 .bottom-sheet {

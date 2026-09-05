@@ -13,6 +13,13 @@
   text-align: center;
 }
 
+.product-carousel__header h2 {
+  font-family: var(--font-display, 'Dm Sans', sans-serif);
+  font-weight: 700;
+  text-shadow: 0 1.5px 0 var(--surface-peach);
+  font-size: clamp(1.5rem, 8.5vw, 2.5rem);
+}
+
 .product-carousel__track {
   display: flex;
   flex-wrap: nowrap;
@@ -46,7 +53,7 @@
   font-family: var(--font-display, 'Dm Sans', sans-serif);
   font-weight: 700;
   text-shadow: 0 1.5px 0 var(--surface-peach);
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 8.5vw, 2.5rem);
 }
 
 .product-details-sheet-overlay{
