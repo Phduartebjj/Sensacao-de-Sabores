@@ -13,4 +13,8 @@ export class ProductService {
   readonly searchEmphasis = computed(() => {
     return this.products().filter((product) => product.badge?.toLowerCase().includes('destaque'));
   });
+
+  getProductById(id: string): Product | undefined {
+    return this.products().find((product) => product.id === id);
+  }
 }

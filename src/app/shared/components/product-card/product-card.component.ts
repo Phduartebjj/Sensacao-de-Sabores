@@ -1,7 +1,7 @@
-import { Component, computed, input, output } from '@angular/core';
+import { Component, computed, inject, input, output } from '@angular/core';
 import { Product } from '../../../core/models/product.model';
 import { PrecoFormatadoPipe } from '../../pipes/preco-formatado-pipe/preco-formatado-pipe';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-card',
   standalone: true,
@@ -10,6 +10,7 @@ import { PrecoFormatadoPipe } from '../../pipes/preco-formatado-pipe/preco-forma
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
+  private readonly router = inject(Router);
   product = input.required<Product>();
   oldPrice = input<number | undefined>(undefined);
 
@@ -27,6 +28,8 @@ export class ProductCardComponent {
   }
 
   onCardClick(): void {
-    this.cardClick.emit(this.product());
+    console.log('CLIQUE NO PRODUTO:', this.product().id);
+
+    this.router.navigate(['/produto', this.product().id]);
   }
 }

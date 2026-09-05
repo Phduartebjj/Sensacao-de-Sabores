@@ -13,7 +13,7 @@ describe('ProductCardComponent', () => {
     description: 'Delicioso bolo',
     price: 8.0,
     image: ['/assets/images/products/Bolo_de_pote_paçoca.jpg'],
-    category: 'bolos de pote',
+    category: 'bolos',
   };
 
   beforeEach(async () => {
